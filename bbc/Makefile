@@ -1,17 +1,16 @@
-CFLAGS = -g -Wall -Wextra
 CC=gcc
+CFLAGS = -g -Wall -Wextra
+
 YACC = bison
 YFLAGS = -d -v -t
 
 LEX = flex
-LFLAGS =
-# Use -d flag for debug:
-# LFLAGS = -d
+LFLAGS = -d
 
 LDFLAGS = -g
 LOADLIBES = -lm
 
-%.tab.c %.tab.h %.output: %.y
+%.tab.c %.tab.h %.tab.output: %.y
 	$(YACC) $(YFLAGS) $<
 
 bbc: barebones_parser.o parser.tab.o scanner.o barebones_utils.o
@@ -28,3 +27,5 @@ parser.tab.o: parser.y barebones.h
 clean:
 	rm *.o
 	rm bbc
+	rm parser.output
+	rm parser.*
