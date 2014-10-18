@@ -23,7 +23,7 @@
 #ifdef __linux__
 #include <unistd.h>
 #elif _WIN32 || __MINGW32__ || WIN32
-#include <Windows.h>
+#include <windows.h>
 #endif
 #include "bbvm.h"
 
