@@ -1,0 +1,30 @@
+language: cpp
+
+compiler:
+- gcc
+
+branches: 
+	only:
+	- mxe_compile
+
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install tree -y
+- git clone --quiet --depth=1 --branch=bin https://github.com/manhtuvjp/test_mxe.git $HOME/mxe
+
+script:
+- NUM_JOBS=$(grep processor /proc/cpuinfo | wc -l)
+- make CROSS=$HOME/mxe/usr/bin/i686-w64-mingw32.static- --jobs=$NUM_JOBS
+- make install
+
+after_success:
+- git clone --quiet --depth=1 --branch=bin https://${GH_TOKEN}@github.com/manhtuvjp/Barebones-Compiler.git bin_mxe > /dev/null
+- cd bin_mxe
+- mv ../bin ./
+- git add -f .
+- git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
+- git push -fq origin bin > /dev/null
+
+env:
+  global:
+    secure: BXmWVHs6u84Qj8WkDkHynDs3A7QQ3qQsOu87hDOfp+w2UD7vCafj+gQSC2o0fI6PRMnrqi/TpE1u8coTn9tCbaTHx5UaPj0BsldJYNoqUHfJznHJYoB2H01QK7RzdoyjrIQOjD12JBM2tqLSxPSMkEmmPw9sZ0+km4McbsdmkBI=
