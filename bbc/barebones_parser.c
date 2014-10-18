@@ -210,7 +210,7 @@ int encode_stmt_list(stmt_t *list){
 }
 
 void compile_program(char *output){
-	unsigned long size;
+	// unsigned long size;
 	var_t *loop = var_head;
 
 	if(remove(output))

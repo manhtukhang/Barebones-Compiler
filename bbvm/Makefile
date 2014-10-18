@@ -1,5 +1,5 @@
 CFLAGS = -g -Wall -Wextra
-CC=gcc
+CC=$(CROSS)gcc
 LDFLAGS = -g
 LOADLIBES = -lm
 
@@ -9,4 +9,5 @@ bbvm.o: bbvm.c bbvm.h
 
 clean:
 	rm *.o
+clear:
 	rm bbvm

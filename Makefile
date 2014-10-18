@@ -8,3 +8,9 @@ all:
 clean:
 	$(MAKE) -C bbc clean
 	$(MAKE) -C bbvm clean
+clear:
+	$(MAKE) -C bbc clear
+install:
+	mkdir bin
+	cp -f bbc/bbc bin
+	cp -f bbvm/bbvm bin

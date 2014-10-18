@@ -1,4 +1,5 @@
-CC=gcc
+# Flags
+CC=$(CROSS)gcc
 CFLAGS = -g -Wall -Wextra
 
 YACC = bison
@@ -9,6 +10,8 @@ LFLAGS = -d
 
 LDFLAGS = -g
 LOADLIBES = -lm
+
+# Output
 
 %.tab.c %.tab.h %.tab.output: %.y
 	$(YACC) $(YFLAGS) $<
@@ -24,8 +27,10 @@ scanner.o: scanner.l barebones.h util.h parser.tab.h
 
 parser.tab.o: parser.y barebones.h
 
+# Operator
 clean:
 	rm *.o
-	rm bbc
+	rm parser.tab.*
 	rm parser.output
-	rm parser.*
+clear:
+	rm bbc
