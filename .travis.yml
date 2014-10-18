@@ -8,6 +8,7 @@ branches:
  - master
 
 before_install:
+- DIR=`pwd`
 - sudo apt-get update -qq
 - sudo apt-get install tree -y
 - git clone --quiet --depth=1 --branch=bin https://github.com/manhtuvjp/test_mxe.git $HOME/mxe
@@ -18,9 +19,12 @@ script:
 - make install
 
 after_success:
-- git clone --quiet --depth=1 --branch=bin https://${GH_TOKEN}@github.com/manhtuvjp/Barebones-Compiler.git bin_mxe > /dev/null
-- cd bin_mxe
-- mv ../bin ./
+- git clone --quiet --depth=1 --branch=bin https://${GH_TOKEN}@github.com/manhtuvjp/Barebones-Compiler.git $HOME/bin_mxe > /dev/null
+- cd $HOME
+- git config --global user.email "manhtuvjp@gmail.com"
+- git config --global user.name "MT"
+- cd $HOME/bin_mxe
+- mv $DIR/bin ./
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
 - git push -fq origin bin > /dev/null
