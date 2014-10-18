@@ -4,8 +4,8 @@ compiler:
 - gcc
 
 branches: 
-	only:
-	- mxe_compile
+ only:
+ - master
 
 before_install:
 - sudo apt-get update -qq
