@@ -23,7 +23,7 @@ install:
 before_script:
 - git clone --branch=master https://github.com/mxe/mxe.git $HOME/mxe
 - cd $HOME/mxe
-- while [ $MINS -gt 0 ]; do echo -e "\n$MINS\033[0K\r\n"; sleep 60; MINS=$((MINS-1)); done & make gcc MXE_TARGETS=x86_64-w64-mingw32.static --jobs=$NUM_JOBS
+- while [ $MINS -gt 0 ]; do echo -e "\n$MINS\033[0K\r\n"; sleep 60; MINS=$((MINS-1)); done & make gcc MXE_TARGETS=x86_64-w64-mingw32 --jobs=$NUM_JOBS
 
 
 script:
