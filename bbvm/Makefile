@@ -1,5 +1,9 @@
-CFLAGS = -g -Wall -Wextra
 CC=$(CROSS)gcc
+LD=$(CROSS)ld
+AR=$(CROSS)ar
+PKG_CONFIG=$(CROSS)pkg-config
+CFLAGS = -g -Wall -Wextra
+
 LDFLAGS = -g
 LOADLIBES = -lm
 
