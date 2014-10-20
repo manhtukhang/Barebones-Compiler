@@ -5,17 +5,30 @@ compiler:
 
 branches: 
  only:
- - master
+ - mxe_compile
 
 before_install:
 - DIR=`pwd`
+- MINS=10
+- NUM_JOBS=$(grep processor /proc/cpuinfo | wc -l)
+- echo $NUM_JOBS
+
+install:
+- sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 - sudo apt-get update -qq
-- sudo apt-get install tree -y
-- git clone --quiet --depth=1 --branch=bin https://github.com/manhtuvjp/test_mxe.git $HOME/mxe
+- sudo apt-get install g++-4.8 g++-4.8-multilib autopoint libc6-dev-i386 gperf tree autoconf automake bash bison bzip2 cmake flex gettext git intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config scons sed unzip wget xz-utils -y
+- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+
+before_script:
+- git clone --branch=master https://github.com/mxe/mxe.git $HOME/mxe
+- cd $HOME/mxe
+- while [ $MINS -gt 0 ]; do echo -e "\n$MINS\033[0K\r\n"; sleep 60; MINS=$((MINS-1)); done & make gcc --jobs=$NUM_JOBS MXE_TARGETS=x86_64-w64-mingw32
+
 
 script:
-- NUM_JOBS=$(grep processor /proc/cpuinfo | wc -l)
-- make CROSS=$HOME/mxe/usr/bin/i686-w64-mingw32.static- --jobs=$NUM_JOBS
+- cd $DIR
+- make CROSS=$HOME/mxe/usr/bin/x86_64-w64-mingw32.static- --jobs=$NUM_JOBS
 - make install
 
 after_success:
@@ -24,6 +37,7 @@ after_success:
 - git config --global user.email "manhtuvjp@gmail.com"
 - git config --global user.name "MT"
 - cd $HOME/bin_mxe
+- git rm -rf \*
 - mv $DIR/bin ./
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
