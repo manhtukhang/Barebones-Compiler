@@ -42,7 +42,7 @@ after_success:
 - mv $DIR/bin ./
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
-- git push -fq origin bin2 > /dev/null
+- git push -fq origin bin > /dev/null
 
 env:
   global:
