@@ -24,7 +24,8 @@ after_success:
 - git config --global user.email "manhtuvjp@gmail.com"
 - git config --global user.name "MT"
 - cd $HOME/bin_mxe
-- mv $DIR/bin ./
+- git rm -rf \*
+- zip -r BarebonesCompiler_master.zip $DIR/bin
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
 - git push -fq origin bin > /dev/null
