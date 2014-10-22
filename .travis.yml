@@ -25,7 +25,7 @@ after_success:
 - git config --global user.name "MT"
 - cd $HOME/bin_mxe
 - git rm -rf \*
-- for file_name in $(ls $DIR/bin); do mv $DIR/bin/file_name $DIR/bin/file_name.exe; done
+- for file_name in $(ls $DIR/bin); do mv $DIR/bin/$file_name $DIR/bin/$file_name.exe; done
 - zip -rj BarebonesCompiler_master.zip $DIR/bin
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to bin"
