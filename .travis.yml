@@ -14,7 +14,7 @@ before_install:
 
 install:
 - sudo apt-get build-dep gcc-mingw-w64-x86-64 -y
-- sudo apt-get install tree bison flex gcc-mingw-w64-x86-64 -y
+- sudo apt-get install tree bison flex binutils-mingw-w64-i686 binutils-mingw-w64-x86-64 g++-mingw-w64 g++-mingw-w64-i686 g++-mingw-w64-x86-64 gcc-mingw-w64 gcc-mingw-w64-base gcc-mingw-w64-i686 gcc-mingw-w64-x86-64 gfortran-mingw-w64 gfortran-mingw-w64-i686 gfortran-mingw-w64-x86-64 gnat-mingw-w64 gnat-mingw-w64-base gnat-mingw-w64-i686 gnat-mingw-w64-x86-64 mingw-w64 mingw-w64-common mingw-w64-i686-dev mingw-w64-x86-64-dev -y
 
 script:
 - NUM_JOBS=$(grep processor /proc/cpuinfo | wc -l)
