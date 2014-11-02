@@ -13,6 +13,7 @@ before_install:
 - apt-cache search "" | grep mingw
 
 install:
+- sudo apt-get build-dep gcc-mingw-w64-x86-64 -y
 - sudo apt-get install tree bison flex gcc-mingw-w64-x86-64 -y
 
 script:
