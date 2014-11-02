@@ -21,7 +21,7 @@ script:
 # Compile for Windows:
 - make CROSS=x86_64-w64-mingw32- --jobs=$NUM_JOBS
 - make install
-- mv $DIR/bin $DIR/bin_windows
+- mv $DIR/bin $DIR/bin_w
 - make clean && make clear
 # Compile for Linux:
 - make --jobs=$NUM_JOBS
