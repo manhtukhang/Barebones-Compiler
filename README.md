@@ -13,7 +13,7 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
         - [Nhập/xuất](#nhậpxuất)
         - [Dấu ngăn cách lệnh và chú thích](#dấu-ngăn-cách-lệnh-và-chú-thích)
 - [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
-    - [Ý tưởng xây dựng](#ý-tưởng-xây-dựng)
+    - [Ý tưởng xây dựng](#y-tuong-xay-dung)
     - [Công cụ](#công-cụ)
 
 <!-- /MarkdownTOC -->
