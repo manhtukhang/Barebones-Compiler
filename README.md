@@ -2,7 +2,7 @@ Bare Bones Compiler
 ===================
 Trình biên dịch cho ngôn ngữ lập trình Bare Bones  
 
-[![Build Status](https://travis-ci.org/manhtuvjp/Barebones-Compiler.svg?branch=master)](https://travis-ci.org/manhtuvjp/Barebones-Compiler)
+Trạng thái mã nguồn: [![Build Status](https://travis-ci.org/manhtuvjp/Barebones-Compiler.svg?branch=master)](https://travis-ci.org/manhtuvjp/Barebones-Compiler)
 
 # Mục lục
 <!-- MarkdownTOC -->
