@@ -22,7 +22,6 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
 
 <!-- /MarkdownTOC -->
 
-
 ## Giới thiệu ngôn ngữ lập trình Bare Bones
 
 ### Tên gọi
@@ -83,8 +82,10 @@ Quy ước tên viết tắt:
 * Máy ảo thực thi mã do BBC sinh ra (hay BareBones Virtual Machine): BBVM
 
 ### Ý tưởng xây dựng
-Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian và thực thi.
-![Sơ đồ](https://dl-web.dropbox.com/get/Public/image.png?_subject_uid=71171617&w=AACWuoFErF3GKZyaJUhsZGpIU7GzxjyWn-SQF3hb7ce5iQ)
+Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"`(BBVM) để đọc tập tin trung gian và thực thi.
+
+![Sơ đồ](http://i.imgur.com/DWPAw0E.png)
+
 * Ưu điểm: Mã nguồn chỉ cần biên dịch 1 lần, sau đó trên mỗi phần cứng, mỗi nền tảng sẽ đều sẽ có 1 máy ảo đảm nhận việc thực thi, không cần viết hay biên dịch lại 
 * Nhược điểm: Phải trải qua 2 bước, không tạo ra tập tin nhị phân thực thi trực tiếp mà cần máy ảo do đó ảnh hưởng đến tốc độ thực thi của chương trình được viết bằng BareBones
 
