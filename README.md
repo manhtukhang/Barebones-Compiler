@@ -5,20 +5,20 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
 # Mục lục
 <!-- MarkdownTOC -->
 
-- [Giới thiệu ngôn ngữ lập trình Bare Bones](#giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
-    - [Tên gọi](#tên-gọi)
+- [Giới thiệu ngôn ngữ lập trình Bare Bones](#Giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
+    - [Tên gọi](#Tên-gọi)
     - [Đặc điểm](#Đặc-điểm)
-        - [Các câu lệnh](#các-câu-lệnh)
-        - [Quy ước đặt tên](#quy-ước-đặt-tên)
-        - [Phạm vi giá trị của biến](#phạm-vi-giá-trị-của-biến)
-        - [Nhập/xuất](#nhậpxuất)
-        - [Dấu ngăn cách lệnh và chú thích](#dấu-ngăn-cách-lệnh-và-chú-thích)
-- [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
-    - [Ý tưởng xây dựng](#%C3%BD-tưởng-xây-dựng)
-    - [Công cụ](#công-cụ)
-    - [Hướng dẫn cài đặt và sử dụng](#hướng-dẫn-cài-đặt-và-sử-dụng)
-        - [Cài đặt](#cài-đặt)
-        - [Sử dụng](#sử-dụng)
+        - [Các câu lệnh](#Các-câu-lệnh)
+        - [Quy ước đặt tên](#Quy-ước-đặt-tên)
+        - [Phạm vi giá trị của biến](#Phạm-vi-giá-trị-của-biến)
+        - [Nhập/xuất](#Nhậpxuất)
+        - [Dấu ngăn cách lệnh và chú thích](#Dấu-ngăn-cách-lệnh-và-chú-thích)
+- [Trình biên dịch cho BareBones](#Trình-biên-dịch-cho-barebones)
+    - [Ý tưởng xây dựng](#Ý-tưởng-xây-dựng)
+    - [Công cụ](#Công-cụ)
+    - [Hướng dẫn cài đặt và sử dụng](#Hướng-dẫn-cài-đặt-và-sử-dụng)
+        - [Cài đặt](#Cài-đặt)
+        - [Sử dụng](#Sử-dụng)
 - [Đóng góp](#Đóng-góp)
 
 <!-- /MarkdownTOC -->
