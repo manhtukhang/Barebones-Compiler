@@ -1,7 +1,8 @@
 Bare Bones Compiler
 ===================
-Trình biên dịch cho ngôn ngữ lập trình Bare Bones
+Trình biên dịch cho ngôn ngữ lập trình Bare Bones  
 
+# Mục lục
 <!-- MarkdownTOC -->
 
 - [Giới thiệu ngôn ngữ lập trình Bare Bones](#giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
@@ -15,6 +16,9 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
 - [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
     - [Ý tưởng xây dựng](#ý-tưởng-xây-dựng)
     - [Công cụ](#công-cụ)
+    - [Hướng dẫn cài đặt và sử dụng](#hướng-dẫn-cài-đặt-và-sử-dụng)
+        - [Cài đặt](#cài-đặt)
+        - [Sử dụng](#sử-dụng)
 
 <!-- /MarkdownTOC -->
 
@@ -79,8 +83,8 @@ Quy ước tên viết tắt:
 * Máy ảo thực thi mã do BBC sinh ra (hay BareBones Virtual Machine): BBVM
 
 ### Ý tưởng xây dựng
-Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại mã trung gian, xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian 
-và thực thi.
+Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian và thực thi.
+![Sơ đồ](https://dl-web.dropbox.com/get/Public/image.png?_subject_uid=71171617&w=AACWuoFErF3GKZyaJUhsZGpIU7GzxjyWn-SQF3hb7ce5iQ)
 * Ưu điểm: Mã nguồn chỉ cần biên dịch 1 lần, sau đó trên mỗi phần cứng, mỗi nền tảng sẽ đều sẽ có 1 máy ảo đảm nhận việc thực thi, không cần viết hay biên dịch lại 
 * Nhược điểm: Phải trải qua 2 bước, không tạo ra tập tin nhị phân thực thi trực tiếp mà cần máy ảo do đó ảnh hưởng đến tốc độ thực thi của chương trình được viết bằng BareBones
 
@@ -88,4 +92,9 @@ và thực thi.
 * Do tính nghèo nàn của BareBones nên ta không thể xây dựng trình biên dịch bằng chính ngôn ngữ này hay nói cách khác, BareBones không là [Bootstrapping (compilers)](http://en.wikipedia.org/wiki/Bootstrapping_%28compilers%29). Vì vậy BBC được xây dựng bằng ngôn ngữ lập trình [C](http://en.wikipedia.org/wiki/C_%28programming_language%29).  
 * Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex](http://en.wikipedia.org/wiki/Lex_%28software%29) & [Yacc](http://en.wikipedia.org/wiki/Yacc) cũng được sử dụng, cụ thể là [GNU Flex](http://www.gnu.org/software/flex) (Lex) và [GNU Bison](http://www.gnu.org/software/bison) (Yacc)
 
+### Hướng dẫn cài đặt và sử dụng
 
+#### Cài đặt
+
+
+#### Sử dụng
