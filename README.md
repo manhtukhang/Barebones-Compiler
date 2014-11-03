@@ -20,6 +20,7 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
         - [Cài đặt](#Cài-đặt)
         - [Sử dụng](#Sử-dụng)
 - [Đóng góp](#Đóng-góp)
+- [Thông tin thêm](#Thông-tin-thêm)
 
 <!-- /MarkdownTOC -->
 
@@ -96,11 +97,9 @@ Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Ja
 * Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex](http://en.wikipedia.org/wiki/Lex_%28software%29) & [Yacc](http://en.wikipedia.org/wiki/Yacc) cũng được sử dụng, cụ thể là [GNU Flex](http://www.gnu.org/software/flex) (Lex) và [GNU Bison](http://www.gnu.org/software/bison) (Yacc)
 
 ### Hướng dẫn cài đặt và sử dụng
-
 #### Cài đặt
-
-
 #### Sử dụng
+Đang viết...
 
 ## Đóng góp
 
@@ -110,3 +109,14 @@ Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng 
 Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Windows
 [Khang Mạnh Tử](https://github.com/manhtuvjp) <br> 12520477@gm.uit.edu.vn| - Xây dựng trình biên dịch và máy ảo <br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI <br> - Viết tài liệu hướng dẫn <br>- Phụ trách nền tảng Linux
 
+## Thông tin thêm
+*Đây là thông tin thêm về các công cụ đã được sử dụng trong dự án này:*
+* Quản lí mã nguồn: [Github](https://github.com)
+* Tự động kiểm tra lỗi và biên dịch: [Travis-CI](https://travis-ci.org/)
+* Trình biên dịch: [GCC](http://gcc.gnu.org/), [mingw-w64](http://mingw-w64.sourceforge.net/)
+* Nền tảng biên dịch mã nguồn: Linux (Ubuntu 12.04 LTS)
+* Bộ công cụ Lex&Yacc: [Flex](http://www.gnu.org/software/flex) (Lex) và [Bison](http://www.gnu.org/software/bison)
+* Coding style: [Linux coding stlye](http://www.kernel.org/doc/Documentation/CodingStyle)
+* Git branching model: [Git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
+* Định dạng tài liệu: [Github flavor markdown](https://guides.github.com/features/mastering-markdown/)
+* Và các nguồn tham khảo khác trên Internet
