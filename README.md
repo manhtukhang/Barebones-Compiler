@@ -5,15 +5,15 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
 <!-- MarkdownTOC -->
 
 - [Giới thiệu ngôn ngữ lập trình Bare Bones](#giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
-    - [1. Tên gọi](#1-tên-gọi)
-    - [2. Đặc điểm](#2-đặc-điểm)
+    - [Tên gọi](#tên-gọi)
+    - [Đặc điểm](#đặc-điểm)
         - [Các câu lệnh](#các-câu-lệnh)
         - [Quy ước đặt tên](#quy-ước-đặt-tên)
         - [Phạm vi giá trị của biến](#phạm-vi-giá-trị-của-biến)
         - [Nhập/xuất](#nhậpxuất)
         - [Dấu ngăn cách lệnh và chú thích](#dấu-ngăn-cách-lệnh-và-chú-thích)
 - [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
-    - [Ý tưởng xây dựng](#y-tuong-xay-dung)
+    - [Ý tưởng xây dựng](#ý-tưởng-xây-dựng)
     - [Công cụ](#công-cụ)
 
 <!-- /MarkdownTOC -->
@@ -21,12 +21,12 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
 
 ## Giới thiệu ngôn ngữ lập trình Bare Bones
 
-### 1. Tên gọi
+### Tên gọi
 
 Bare Bones (programing language) dịch ra Tiếng Việt có nghĩa là  ngôn ngữ lập trình cơ bản nhất, đơn giản nhất;  
 Vì tên dịch ra rất dài, khó nhớ nên từ đây trở về sau, trong tài liệu này sẽ quy ước tên gọi là **ngôn ngữ lập trình BareBones** hay đơn giản là **BareBones**
 
-### 2. Đặc điểm
+### Đặc điểm
 
 #### Các câu lệnh
 
