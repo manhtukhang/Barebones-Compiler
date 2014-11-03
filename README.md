@@ -19,8 +19,10 @@ Trình biên dịch cho ngôn ngữ lập trình Bare Bones
     - [Hướng dẫn cài đặt và sử dụng](#hướng-dẫn-cài-đặt-và-sử-dụng)
         - [Cài đặt](#cài-đặt)
         - [Sử dụng](#sử-dụng)
+- [Đóng góp](#đóng-góp)
 
 <!-- /MarkdownTOC -->
+
 
 ## Giới thiệu ngôn ngữ lập trình Bare Bones
 
@@ -82,7 +84,7 @@ Quy ước tên viết tắt:
 * Máy ảo thực thi mã do BBC sinh ra (hay BareBones Virtual Machine): BBVM
 
 ### Ý tưởng xây dựng
-Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"`(BBVM) để đọc tập tin trung gian và thực thi.
+Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian và thực thi.
 
 ![Sơ đồ](http://i.imgur.com/DWPAw0E.png)
 
@@ -99,3 +101,12 @@ Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Ja
 
 
 #### Sử dụng
+
+## Đóng góp
+
+Tác giả | Công việc phụ trách
+:-------|:-------------------
+Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex <br> - Xây dựng bộ từ vựng cho ngôn ngữ <br> - Phụ trách nền tảng Mac OS
+Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Windows
+[Khang Mạnh Tử](https://github.com/manhtuvjp) <br> 12520477@gm.uit.edu.vn| - Xây dựng trình biên dịch và máy ảo <br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI <br> - Viết tài liệu hướng dẫn <br>- Phụ trách nền tảng Linux
+
