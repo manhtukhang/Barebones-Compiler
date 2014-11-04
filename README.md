@@ -108,7 +108,7 @@ Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Ja
 Tác giả | Công việc phụ trách
 :-------|:-------------------
 Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex<br> - Xây dựng bộ từ vựng cho ngôn ngữ<br> - Phụ trách nền tảng Windows
-Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison<br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ<br> - Phụ trách nền tảng Mac OSX
+[Lương Tấn Đạt](https://github.com/luongdat0894)<br> luongdat0894@gmail.com | - Tìm hiểu công cụ Yacc và cách sử dụng Bison<br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ<br> - Phụ trách nền tảng Mac OSX
 [Khang Mạnh Tử](https://github.com/manhtuvjp)<br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo<br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI<br> - Viết tài liệu hướng dẫn<br> - Phụ trách nền tảng Linux
 
 ## Thông tin thêm
