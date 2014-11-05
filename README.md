@@ -45,9 +45,9 @@ Câu lệnh                    | Ý nghĩa
 init <*biến*> = <*giá trị*>;| Khai báo biến và khởi tạo giá trị cho biến
 clear <*biến*>;             | Xóa giá trị của biến (đưa về `0`) (`X := 0`)
 incr <*biến*>;              | Tăng giá trị của lên 1 đơn vị (`X := X + 1`)
-decr <*biến*>;              | Giảm giá trị của xuống 1 đơn vị, (`X := X - 1`)
+decr <*biến*>;              | Giảm giá trị của xuống 1 đơn vị (`X := X - 1`)
 copy <*biến*> to <*biến*>;  | Sao chép giá trị của 1 biến cho 1 biến khác (`Y := X`)
-while <*biến*> not 0 do;<br> &nbsp;&nbsp;&nbsp;&nbsp;<*các câu lệnh*>;<br> end; | Nếu giá trị của `biến` chưa bằng `0` thì các câu lệnh trong vòng lặp `while` vẫn tiếp tục.
+while <*biến*> not 0 do; <br> &nbsp;&nbsp;&nbsp;&nbsp;<*các câu lệnh*>; <br> end; | Nếu giá trị của `biến` chưa bằng `0` thì các câu lệnh trong vòng lặp `while` vẫn tiếp tục.
 
 #### Quy ước đặt tên
 - Từ khóa (tên dành riêng): các từ trong danh sách sau là tên dành riêng được BareBones sử dụng, không được dùng để đặt tên cho biến
@@ -68,7 +68,7 @@ Biến có thể nhận các giá trị là số nguyên không âm, giới hạ
 BareBones không sử dụng nhập xuất từ bên ngoài chương trình. Giá trị được nhập lúc khởi tạo biến, khi chương trình kết thúc, các giá trị sẽ được xuất ra *thiết bị xuất chuẩn* (thường là màn hình)
 
 #### Dấu ngăn cách lệnh và chú thích
-- Chú thích: sử dụng dấu `#`đầu chú thích, chú thích được tính từ sau dấu `#` đến cuối dòng, không có chú thích nhiều dòng, muốn làm vậy phải sử dụng `#` cho mỗi dòng cần chú thích
+- Chú thích: sử dụng dấu `#` đầu chú thích, chú thích được tính từ sau dấu `#` đến cuối dòng, không có chú thích nhiều dòng, muốn làm vậy phải sử dụng `#` cho mỗi dòng cần chú thích
 - Ngăn cách lệnh: sử dụng dấu `;` ở cuối mỗi lệnh. **Đặc biệt**, sau từ khóa `do` cũng phải có dấu `;`
 
 
@@ -98,9 +98,9 @@ Dựa trên ý tưởng của ngôn ngữ [Java] \(viết 1 lần, chạy nhiề
 
 Tác giả | Công việc phụ trách
 :-------|:-------------------
-Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex<br> - Xây dựng bộ từ vựng cho ngôn ngữ<br> - Phụ trách nền tảng Windows
-Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison<br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ<br> - Phụ trách nền tảng Mac OSX
-[Khang Mạnh Tử]<br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo<br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI<br> - Viết tài liệu hướng dẫn<br> - Phụ trách nền tảng Linux
+Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex <br> - Xây dựng bộ từ vựng cho ngôn ngữ <br> - Phụ trách nền tảng Windows
+Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Mac OSX
+[Khang Mạnh Tử] <br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo <br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI <br> - Viết tài liệu hướng dẫn <br> - Phụ trách nền tảng Linux
 
 ## Thông tin thêm
 *Đây là thông tin thêm về các tài liệu tham khảo và công cụ đã được sử dụng trong dự án này:*
