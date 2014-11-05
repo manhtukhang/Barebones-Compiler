@@ -2,26 +2,26 @@ Bare Bones Compiler
 ===================
 Trình biên dịch cho ngôn ngữ lập trình Bare Bones  
 
-Trạng thái mã nguồn: <Sẽ bổ sung ngay khi có>  
+<!-- Trạng thái mã nguồn:  Sẽ bổ sung ngay khi có -->  
 
 # Mục lục
 <!-- MarkdownTOC -->
 
 - [Giới thiệu ngôn ngữ lập trình Bare Bones](#giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
     - [Tên gọi](#tên-gọi)
-    - [Đặc điểm](#đặc-điểm)
+    - [Đặc điểm](#Đặc-điểm)
         - [Các câu lệnh](#các-câu-lệnh)
         - [Quy ước đặt tên](#quy-ước-đặt-tên)
         - [Phạm vi giá trị của biến](#phạm-vi-giá-trị-của-biến)
         - [Nhập/xuất](#nhậpxuất)
         - [Dấu ngăn cách lệnh và chú thích](#dấu-ngăn-cách-lệnh-và-chú-thích)
 - [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
-    - [Ý tưởng xây dựng](#ý-tưởng-xây-dựng)
+    - [Ý tưởng xây dựng](#Ý-tưởng-xây-dựng)
     - [Công cụ](#công-cụ)
     - [Hướng dẫn cài đặt và sử dụng](#hướng-dẫn-cài-đặt-và-sử-dụng)
         - [Cài đặt](#cài-đặt)
         - [Sử dụng](#sử-dụng)
-- [Đóng góp](#đóng-góp)
+- [Đóng góp](#Đóng-góp)
 - [Thông tin thêm](#thông-tin-thêm)
 
 <!-- /MarkdownTOC -->
@@ -87,21 +87,21 @@ Quy ước tên viết tắt:
 - Máy ảo thực thi mã do BBC sinh ra (hay BareBones Virtual Machine): BBVM
 
 ### Ý tưởng xây dựng
-Dựa trên ý tưởng của ngôn ngữ [Java](http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29) (viết 1 lần, chạy nhiều nơi), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian](http://en.wikipedia.org/wiki/P-code_machine), xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian và thực thi.
+Dựa trên ý tưởng của ngôn ngữ [Java] \(viết 1 lần, chạy nhiều nơi\), ngôn ngữ BareBones cũng tương tự như vậy: mã nguồn được dịch ra 1 loại [mã trung gian], xuất ra tập tin , tuy nhiên tập tin này chưa thể thực thi được. Muốn thực thi chương trình ta cần dùng 1 `"máy ảo"` để đọc tập tin trung gian và thực thi.
 
-![Mô hình](http://i.imgur.com/93C6NJ3.png)
+![Mô hình]
 
 - Ưu điểm: Mã nguồn chỉ cần biên dịch 1 lần, sau đó trên mỗi phần cứng, mỗi nền tảng sẽ đều sẽ có 1 máy ảo đảm nhận việc thực thi, không cần viết hay biên dịch lại. 
 - Nhược điểm: Phải trải qua 2 bước, không tạo ra tập tin nhị phân thực thi trực tiếp mà cần máy ảo do đó ảnh hưởng đến tốc độ thực thi của chương trình được viết bằng BareBones.
 
 ### Công cụ
-- Do tính nghèo nàn của BareBones nên ta không thể xây dựng trình biên dịch bằng chính ngôn ngữ này hay nói cách khác, BareBones không là [Bootstrapping (compilers)](http://en.wikipedia.org/wiki/Bootstrapping_%28compilers%29). Vì vậy BBC được xây dựng bằng ngôn ngữ lập trình [C](http://en.wikipedia.org/wiki/C_%28programming_language%29).  
-- Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex](http://en.wikipedia.org/wiki/Lex_%28software%29) & [Yacc](http://en.wikipedia.org/wiki/Yacc) cũng được sử dụng, cụ thể là [GNU Flex](http://www.gnu.org/software/flex) (Lex) và [GNU Bison](http://www.gnu.org/software/bison) (Yacc)
+- Do tính nghèo nàn của BareBones nên ta không thể xây dựng trình biên dịch bằng chính ngôn ngữ này hay nói cách khác, BareBones không là [Bootstrapping (compilers)]. Vì vậy BBC được xây dựng bằng ngôn ngữ lập trình [C].  
+- Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex] & [Yacc] cũng được sử dụng, cụ thể là [GNU Flex] \(Lex\) và [GNU Bison] \(Yacc\)
 
 ### Hướng dẫn cài đặt và sử dụng
 #### Cài đặt
 #### Sử dụng
-<Sẽ bổ sung ngay sau khi hoàn thành>
+<!-- Sẽ bổ sung ngay sau khi hoàn thành -->
 
 ## Đóng góp
 
@@ -109,19 +109,33 @@ Tác giả | Công việc phụ trách
 :-------|:-------------------
 Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex<br> - Xây dựng bộ từ vựng cho ngôn ngữ<br> - Phụ trách nền tảng Windows
 Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison<br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ<br> - Phụ trách nền tảng Mac OSX
-[Khang Mạnh Tử](https://github.com/manhtuvjp)<br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo<br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI<br> - Viết tài liệu hướng dẫn<br> - Phụ trách nền tảng Linux
+[Khang Mạnh Tử]<br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo<br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI<br> - Viết tài liệu hướng dẫn<br> - Phụ trách nền tảng Linux
 
 ## Thông tin thêm
 *Đây là thông tin thêm về các tài liệu tham khảo và công cụ đã được sử dụng trong dự án này:*
 - Tài liệu tham khảo:
-	+ [Writing your own toy compiler using Flex, Bison and LLVM](http://gnuu.org/2009/09/18/writing-your-own-toy-compiler/)
-	+ [How to write a very basic compiler (in C)](http://programmers.stackexchange.com/a/165558)
+    + [Writing your own toy compiler using Flex, Bison and LLVM](http://gnuu.org/2009/09/18/writing-your-own-toy-compiler/)
+    + [How to write a very basic compiler (in C)](http://programmers.stackexchange.com/a/165558)
 - Công cụ:
-	+ Quản lí mã nguồn: [Github](https://github.com)
-	+ Tự động kiểm tra lỗi và biên dịch: [Travis-CI](https://travis-ci.org/)
-	+ Trình biên dịch: [GCC](http://gcc.gnu.org/), [mingw-w64](http://mingw-w64.sourceforge.net/)
-	+ Nền tảng biên dịch mã nguồn: Linux (Ubuntu)
-	+ Bộ công cụ Lex&Yacc: [Flex](http://www.gnu.org/software/flex) (Lex) và [Bison](http://www.gnu.org/software/bison)
-	+ Coding style: [Linux coding stlye](http://www.kernel.org/doc/Documentation/CodingStyle)
-	+ Git branching model: [Git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
-	+ Định dạng tài liệu: [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+    + Quản lí mã nguồn: [Github](https://github.com)
+    + Tự động kiểm tra lỗi và biên dịch: [Travis-CI](https://travis-ci.org/)
+    + Trình biên dịch: [GCC](http://gcc.gnu.org/), [mingw-w64](http://mingw-w64.sourceforge.net/)
+    + Nền tảng biên dịch mã nguồn: Linux (Ubuntu)
+    + Bộ công cụ Lex&Yacc: [Flex](http://www.gnu.org/software/flex) (Lex) và [Bison](http://www.gnu.org/software/bison) (Yacc)
+    + Coding style: [Linux coding stlye](http://www.kernel.org/doc/Documentation/CodingStyle)
+    + Git branching model: [Git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
+    + Định dạng tài liệu: [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+
+<!-- Link -->
+[Java]: http://vi.wikipedia.org/wiki/Java_%28ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh%29
+[mã trung gian]: http://en.wikipedia.org/wiki/P-code_machine
+[Bootstrapping (compilers)]: http://en.wikipedia.org/wiki/Bootstrapping_%28compilers%29
+[C]: http://en.wikipedia.org/wiki/C_%28programming_language%29
+[Lex]: http://en.wikipedia.org/wiki/Lex_%28software%29
+[Yacc]: http://en.wikipedia.org/wiki/Yacc
+[GNU Flex]: http://www.gnu.org/software/flex
+[GNU Bison]: http://www.gnu.org/software/bison
+
+[Mô hình]: http://i.imgur.com/93C6NJ3.png "Mô hình về quá trình biên dịch và thực thi của BareBones"
+
+[Khang Mạnh Tử]: https://github.com/manhtuvjp
