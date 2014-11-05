@@ -52,16 +52,7 @@ while <*biến*> not 0 do;<br> &nbsp;&nbsp;&nbsp;&nbsp;<*các câu lệnh*>;<br>
 #### Quy ước đặt tên
 - Từ khóa (tên dành riêng): các từ trong danh sách sau là tên dành riêng được BareBones sử dụng, không được dùng để đặt tên cho biến
 ```
-    clear  
-    copy  
-    decr  
-    do  
-    end  
-    incr  
-    init  
-    not  
-    to  
-    while  
+    init, clear, copy, decr, incr, while, not, to, do, end
 ```
 Các từ khóa không phân biệt hoa-thường
 
