@@ -99,7 +99,7 @@ Dựa trên ý tưởng của ngôn ngữ [Java] \(viết 1 lần, chạy nhiề
 Tác giả | Công việc phụ trách
 :-------|:-------------------
 Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex <br> - Xây dựng bộ từ vựng cho ngôn ngữ <br> - Phụ trách nền tảng Windows
-Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Mac OSX
+[Lương Tấn Đạt]<br> luongdat0894@gmail.com | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Mac OSX
 [Khang Mạnh Tử] <br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo <br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI <br> - Viết tài liệu hướng dẫn <br> - Phụ trách nền tảng Linux
 
 ## Thông tin thêm
@@ -130,3 +130,4 @@ Lương Tấn Đạt | - Tìm hiểu công cụ Yacc và cách sử dụng Bison
 [Mô hình]: http://i.imgur.com/93C6NJ3.png "Mô hình về quá trình biên dịch và thực thi của BareBones"
 
 [Khang Mạnh Tử]: https://github.com/manhtuvjp
+[Lương Tấn Đạt]: https://github.com/luongdat0894
