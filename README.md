@@ -2,26 +2,24 @@ Bare Bones Compiler
 ===================
 Trình biên dịch cho ngôn ngữ lập trình Bare Bones  
 
-<!-- Trạng thái mã nguồn:  Sẽ bổ sung ngay khi có -->  
-
 # Mục lục
 <!-- MarkdownTOC -->
 
 - [Giới thiệu ngôn ngữ lập trình Bare Bones](#giới-thiệu-ngôn-ngữ-lập-trình-bare-bones)
     - [Tên gọi](#tên-gọi)
-    - [Đặc điểm](#Đặc-điểm)
+    - [Đặc điểm](#đặc-điểm)
         - [Các câu lệnh](#các-câu-lệnh)
         - [Quy ước đặt tên](#quy-ước-đặt-tên)
         - [Phạm vi giá trị của biến](#phạm-vi-giá-trị-của-biến)
         - [Nhập/xuất](#nhậpxuất)
         - [Dấu ngăn cách lệnh và chú thích](#dấu-ngăn-cách-lệnh-và-chú-thích)
 - [Trình biên dịch cho BareBones](#trình-biên-dịch-cho-barebones)
-    - [Ý tưởng xây dựng](#Ý-tưởng-xây-dựng)
+    - [Ý tưởng xây dựng](#ý-tưởng-xây-dựng)
     - [Công cụ](#công-cụ)
     - [Hướng dẫn cài đặt và sử dụng](#hướng-dẫn-cài-đặt-và-sử-dụng)
         - [Cài đặt](#cài-đặt)
         - [Sử dụng](#sử-dụng)
-- [Đóng góp](#Đóng-góp)
+- [Đóng góp](#đóng-góp)
 - [Thông tin thêm](#thông-tin-thêm)
 
 <!-- /MarkdownTOC -->
@@ -90,16 +88,92 @@ Dựa trên ý tưởng của ngôn ngữ [Java] \(viết 1 lần, chạy nhiề
 - Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex] & [Yacc] cũng được sử dụng, cụ thể là [GNU Flex] \(Lex\) và [GNU Bison] \(Yacc\)
 
 ### Hướng dẫn cài đặt và sử dụng
-#### Cài đặt
-#### Sử dụng
-<!-- Sẽ bổ sung ngay sau khi hoàn thành -->
+#### Hướng dẫn biên dịch
+##### I - Cho Linux
+###### 1. Yêu cầu cấu hình
+Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **amd64** thông thường đều sử dụng được
+###### 2. Công cụ cần thiết
+- Hệ điều hành: *Linux*
+- Trình biên dịch C: *GCC*
+- *Flex, Bison*
+
+###### 3. Cài đặt các công cụ
++ Hệ điều hành: sử dụng Ubuntu
++ GCC:  
+*Vào terminal gõ:*
+        sudo apt-get update -qq
+        sudo apt-get install gcc -y
++ Flex, Bison:  
+*Tương tự, cũng gõ lệnh sau vào terminal:*
+        sudo apt-get install flex bison -y
+###### 4. Biên dịch từ mã nguồn
+- Mở terminal, gõ lệnh sau:
+        cd <thư mục chứa mã nguồn>
+- Gõ tiếp:
+       make install_linux
+- Sau khi quá trình biên dịch kết thúc sẽ có 1 thư mục tên **bin** xuất hiện chứa 2 tệp tin là **bbc** (trình biên dịch BareBones) và **bbvm** (máy ảo thực thi BareBones)
+
+##### II - Cho Windows
+**Lưu ý:** mặc dù trình biên dịch và máy ảo cho BareBones có thể chạy trên Windows nhưng quá trình biên dịch vẫn phải tiến hành trên Linux
+###### 1. Yêu cầu cấu hình
+Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **amd64** thông thường đều sử dụng được
+###### 2. Công cụ cần thiết
+- Hệ điều hành: *Linux*
+- Trình biên dịch C: *MinGW*
+- *Flex, Bison*
+
+###### 3. Cài đặt các công cụ
++ Hệ điều hành: sử dụng Ubuntu
++ MinGW:  
+*Vào terminal gõ:*
+        sudo apt-get update -qq
+        sudo apt-get install binutils-mingw-w64-i686 \
+                             binutils-mingw-w64-x86-64  \ 
+                             gcc-mingw-w64 \
+                             gcc-mingw-w64-base \
+                             gcc-mingw-w64-i686 \
+                             gcc-mingw-w64-x86-64 -y
++ Flex, Bison:  
+*Tương tự, cũng gõ lệnh sau vào terminal:*
+        sudo apt-get install flex bison -y
+###### 4. Biên dịch từ mã nguồn
+- Mở terminal, gõ lệnh sau:
+        cd <thư mục chứa mã nguồn>
+- Gõ tiếp:
+        make CROSS=x86_64-w64-mingw32- install_windows
+        make clean && make clear
+- Sau khi quá trình biên dịch kết thúc sẽ có 1 thư mục tên **bin** xuất hiện chứa 2 tệp tin là **bbc.exe** (trình biên dịch BareBones) và **bbvm.exe** (máy ảo thực thi BareBones) 
+
+#Hướng dẫn sử dụng
+- Biên dịch từ chương trình viết bằng BareBones ra tệp mã byte:  
+*Mở Terminal (Linux) hoặc Command Prompt (Windows), gõ:*
+        cd <thư mục chứa 2 tệp bbc và bbvm>
+*Biên dịch*
+    - Linux:
+            ./bbc <tệp chứa chương trình> -o <tệp mã byte xuất ra>
+        *Ví dụ:*
+            ./bbc ~/add_pro_src.bb -o add_output.bbo
+    - Windows:
+            bbc <tệp chứa chương trình> -o <tệp mã byte xuất ra>
+        *Ví dụ:*
+            bbc D:\BareBones\add_pro_src.bb -o D:\BareBones\add_output.bbo
+- Thực thi chương trình đã được biên dịch:
+    - Linux:
+            ./bbvm <tệp mã byte vừa được biên dịch>
+        *Ví dụ:*
+            ./bbvm ~/add_pro_src.bb -o add_output.bbo
+    - Windows:
+            bbvm <tệp mã byte vừa được biên dịch>
+        *Ví dụ:*
+            bbvm D:\BareBones\add_output.bbo
+
 
 ## Đóng góp
 
 Tác giả | Công việc phụ trách
 :-------|:-------------------
 Trần Thị Duyên Hồng | - Tìm hiểu công cụ Lex và cách sử dụng Flex <br> - Xây dựng bộ từ vựng cho ngôn ngữ <br> - Phụ trách nền tảng Windows
-[Lương Tấn Đạt]<br> luongdat0894@gmail.com | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Mac OSX
+[Lương Tấn Đạt]<br> luongdat0894@gmail.com | - Tìm hiểu công cụ Yacc và cách sử dụng Bison <br> - Xây dựng bộ phân tích cú pháp cho ngôn ngữ <br> - Phụ trách nền tảng Windows
 [Khang Mạnh Tử] <br> 12520477@gm.uit.edu.vn | - Xây dựng trình biên dịch và máy ảo <br> - Chịu trách nhiệm triển khai biên dịch mã nguồn tự động trên Travis-CI <br> - Viết tài liệu hướng dẫn <br> - Phụ trách nền tảng Linux
 
 ## Thông tin thêm
