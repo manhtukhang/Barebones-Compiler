@@ -87,17 +87,17 @@ Dựa trên ý tưởng của ngôn ngữ [Java] \(viết 1 lần, chạy nhiề
 - Do tính nghèo nàn của BareBones nên ta không thể xây dựng trình biên dịch bằng chính ngôn ngữ này hay nói cách khác, BareBones không là [Bootstrapping (compilers)]. Vì vậy BBC được xây dựng bằng ngôn ngữ lập trình [C].  
 - Ngoài ra, để tự động sinh mã hỗ trợ cho việc xây dựng BBC, bộ công cụ phân tích từ vựng và phân tích cú pháp [Lex] & [Yacc] cũng được sử dụng, cụ thể là [GNU Flex] \(Lex\) và [GNU Bison] \(Yacc\)
 
-### Hướng dẫn cài đặt và sử dụng
-#### Hướng dẫn biên dịch
-#### I - Cho Linux
-##### 1. Yêu cầu cấu hình
+## Hướng dẫn cài đặt và sử dụng
+### Hướng dẫn biên dịch
+### I - Cho Linux
+#### 1. Yêu cầu cấu hình
 Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **amd64** thông thường đều sử dụng được
-##### 2. Công cụ cần thiết
+#### 2. Công cụ cần thiết
 - Hệ điều hành: *Linux*
 - Trình biên dịch C: *GCC*
 - *Flex, Bison*
 
-##### 3. Cài đặt các công cụ
+#### 3. Cài đặt các công cụ
 + Hệ điều hành: sử dụng Ubuntu
 + GCC:  
 *Vào terminal gõ:*
@@ -107,25 +107,25 @@ Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **am
 *Tương tự, cũng gõ lệnh sau vào terminal:*
         sudo apt-get install flex bison -y
 
-##### 4. Biên dịch từ mã nguồn
+#### 4. Biên dịch từ mã nguồn
 - Mở terminal, gõ lệnh sau:
         cd <thư mục chứa mã nguồn>
 - Gõ tiếp:
        make install_linux
 - Sau khi quá trình biên dịch kết thúc sẽ có 1 thư mục tên **bin** xuất hiện chứa 2 tệp tin là **bbc** (trình biên dịch BareBones) và **bbvm** (máy ảo thực thi BareBones)  
 
-#### II - Cho Windows
-**Lưu ý:** mặc dù trình biên dịch và máy ảo cho BareBones có thể chạy trên Windows nhưng quá trình biên dịch vẫn phải tiến hành trên Linux  
+### II - Cho Windows
+**Lưu ý:** mặc dù trình biên dịch và máy ảo cho BareBones có thể chạy trên Windows nhưng quá trình biên dịch vẫn phải tiến hành trên Linux
 
-##### 1. Yêu cầu cấu hình
+#### 1. Yêu cầu cấu hình
 Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **amd64** thông thường đều sử dụng được  
 
-##### 2. Công cụ cần thiết
+#### 2. Công cụ cần thiết
 - Hệ điều hành: *Linux*
 - Trình biên dịch C: *MinGW*
 - *Flex, Bison*  
 
-##### 3. Cài đặt các công cụ
+#### 3. Cài đặt các công cụ
 + Hệ điều hành: sử dụng Ubuntu
 + MinGW:  
 *Vào terminal gõ:*
@@ -140,13 +140,13 @@ Không có yêu cầu đặc biệt, các PC nền tảng Intel **x86** và **am
 *Tương tự, cũng gõ lệnh sau vào terminal:*
         sudo apt-get install flex bison -y
 
-##### 4. Biên dịch từ mã nguồn
+#### 4. Biên dịch từ mã nguồn
 - Mở terminal, gõ lệnh sau:
         cd <thư mục chứa mã nguồn>
 - Gõ tiếp:
         make CROSS=x86_64-w64-mingw32- install_windows
         make clean && make clear
-- Sau khi quá trình biên dịch kết thúc sẽ có 1 thư mục tên **bin** xuất hiện chứa 2 tệp tin là **bbc.exe** (trình biên dịch BareBones) và **bbvm.exe** (máy ảo thực thi BareBones)   
+- Sau khi quá trình biên dịch kết thúc sẽ có 1 thư mục tên **bin** xuất hiện chứa 2 tệp tin là **bbc.exe** (trình biên dịch BareBones) và **bbvm.exe** (máy ảo thực thi BareBones)
 
 ### Hướng dẫn sử dụng
 - Biên dịch từ chương trình viết bằng BareBones ra tệp mã byte:  
